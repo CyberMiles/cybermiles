@@ -78,7 +78,7 @@ Borrowing a page from past successful enterprise software's playbook, the key is
 
 Software encapsulation and reuse are the most important best practices in enterprise software. It is time for us to apply this best practice to blockchain platform as well.
 
-![](https://github.com/CyberMiles/cybermiles/raw/master/whitepaper/CM_node.png | width=480)
+<img src="https://github.com/CyberMiles/cybermiles/raw/master/whitepaper/CM_node.png" width="600"/>
 _Figure 1. shows the overall architecture of the CyberMiles blockchain. As you can see, a significant amount of reusable software components resides outside of the blockchain._
 
 ### 2.1 Smart Business Contract 
@@ -275,6 +275,7 @@ The CyberMiles team has conducted extensive research comparing available blockch
 
 Due to the underlying Tendermint DPoS mechanism, the CyberMiles blockchain would have a block generation time of under 10s, and transactions in a block are instantly confirmed once the block is committed. 
 
+<img src="https://github.com/CyberMiles/cybermiles/raw/master/whitepaper/CM_validator.png" width="600"/>
 _Figure 2. illustrates the work CyberMiles blockchain validators perform._
 
 ### 4.2 The Crypto Token
@@ -331,6 +332,7 @@ The workflow below and Figure 3 illustrate how an “online wallet” for person
 1. The wallet generates a public / private key pair and then broadcasts the public key to the blockchain for record.
 1. The wallet authorizes and tests the banking link.
 
+<img src="https://github.com/CyberMiles/cybermiles/raw/master/whitepaper/CM_loan_demo_registration.png" width="480"/>
 _Figure 3. A decentralized identity management platform on CyberMiles_
 
 ### 5.2 A Peer to Peer Small Business Loan Marketplace
@@ -347,6 +349,7 @@ With the identity and credit history, we can build a loan matching engine (the l
 1. The loan contract is recorded by the exchange and on the blockchain. 
 1. The exchange requests the wallets to settle both parties via their bank accounts. 
 
+<img src="https://github.com/CyberMiles/cybermiles/raw/master/whitepaper/CM_loan_demo_match.png" width="600"/>
 _Figure 4. Match and settle a decentralized loan._
 
 Throughout the term of the loan, when a payment is due, the Smart Business Contract would automatically execute the following.
