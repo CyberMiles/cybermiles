@@ -78,6 +78,7 @@ Borrowing a page from past successful enterprise software's playbook, the key is
 
 Software encapsulation and reuse are the most important best practices in enterprise software. It is time for us to apply this best practice to blockchain platform as well.
 
+![](https://github.com/CyberMiles/cybermiles/raw/master/whitepaper/CM_node.png | width=480)
 _Figure 1. shows the overall architecture of the CyberMiles blockchain. As you can see, a significant amount of reusable software components resides outside of the blockchain._
 
 ### 2.1 Smart Business Contract 
