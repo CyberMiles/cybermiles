@@ -393,25 +393,47 @@ We would like to acknowledge Dr. Michael Yuan and Dr. Lucas Lu for their contrib
 ## REFERENCES
 
 [1]	Nakamoto, S. Bitcoin: A Peer-to-Peer Electronic Cash System. https://bitcoin.org/bitcoin.pdf 2008.
+
 [2]	The Ethereum Team. A Next-Generation Smart Contract and Decentralized Application Platform. https://github.com/ethereum/wiki/wiki/White-Paper  2014
+
 [3]	Kwon, J. Tendermint: Consensus without Mining. https://tendermint.com/static/docs/tendermint.pdf 2014.
+
 [4]	Popov, S. IOTA: The tangle. https://iota.org/IOTA_Whitepaper.pdf 2016.
+
 [5]	Zamfir, V. Introducing Casper “the Friendly Ghost”. https://blog.ethereum.org/2015/08/01/introducing-casper-friendly-ghost/ 2015.
+
 [6]	Kwon, J and Buchman, E. Cosmos: A Network of Distributed Ledgers. https://cosmos.network/whitepaper 2016.
+
 [7]	Wood, G. Polkadot: Vision for a heterogeneous multi-chain framework. https://github.com/polkadot-io/polkadot-white-paper 2016.
+
 [8]	Poon, J and Dryja, T. The Bitcoin Lightning Network:
 Scalable Off-Chain Instant Payments. https://lightning.network/lightning-network-paper.pdf 2016.
+
 [9]	Poon, J and Buterin, V. Plasma: Scalable Autonomous Smart Contracts. http://plasma.io/plasma.pdf 2017.
+
 [10]	Teutsch, J and Reitwiebner, C. A scalable verification solution for blockchains. http://bit.ly/2vIConl 2017.
+
 [11]	Forgy, C. Rete: A Fast Algorithm for the Many Pattern / Many Object Pattern Match Problem. Artificial Intelligence. 19: 17–37. 1982.
+
 [12]	Oracle. The Java Enterprise Edition Platform. https://www.oracle.com/java/technologies/java-ee.html
+
 [13]	Redhat. The Drools Business Rules Management System.  http://drools.org/
+
 [14]	Sandia National Laboratories. Jess, the Rule Engine for the Java Platform. http://www.jessrules.com/
+
 [15]	Redhat. jBPM, a flexible Business Process Management Suite. http://www.jbpm.org/
+
 [16]	Lazo, D. OSWorkflow. http://shop.oreilly.com/product/9781847191526.do 2007
+
 [17]	DataStax. The Apache Cassandra database. http://cassandra.apache.org/
+
 [18]	The Ethereum Team. Swarm, serverless hosting incentivised peer-to-peer storage and content distribution. http://swarm-gateways.net/bzz:/theswarm.eth
+
 [19]	Benet, J. IPFS - Content Addressed, Versioned, P2P File System. 
-[20]	Protocol Labs. Filecoin: A Decentralized Storage Network. http://filecoin.io/filecoin.pdf 2017.[21]	The Civic Team. Civic Whitepaper. https://tokensale.civic.com/CivicTokenSaleWhitePaper.pdf 2017
+
+[20]	Protocol Labs. Filecoin: A Decentralized Storage Network. http://filecoin.io/filecoin.pdf 2017.
+
+[21]	The Civic Team. Civic Whitepaper. https://tokensale.civic.com/CivicTokenSaleWhitePaper.pdf 2017
+
 [22]	Thomas, S. & Schwartz, E. A Protocol for Interledger Payments. https://interledger.org/interledger.pdf 2015
 
