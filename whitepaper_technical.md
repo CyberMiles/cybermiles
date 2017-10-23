@@ -312,3 +312,106 @@ Second, 5miles will create a new application to support small business loans bet
 
 Finally, 5miles will migrate its flagship C2C (Consumer to Consumer) e-commerce application to the CyberMiles blockchain. It will be a DApp managed by 5miles, and supported by Smart Business Contracts on CyberMiles. That could potentially move $3 billion worth of transactions to the CyberMiles platform. As a result, 5miles itself will purchase and consume significant amount of CMT in order to pay the gas cost for running Smart Business Contracts. 
 
+## 5. APPLICATIONS
+
+The CyberMiles blockchain platform would primarily support middleware operations for business transactional applications. As such, it would be mostly beneath the UI of the user-facing application. However, due to the unique characteristics of the decentralized blockchain, its Smart Business Contracts could enable potential new features and applications that were not possible in the world of centralized e-commerce operations.
+
+### 5.1 A Decentralized Identify Management Platform
+
+As the Equifax hack demonstrated (personal identify and credit history of over 100 million Americans were stolen in 2017), centralized personal identity management creates high risk for consumers and high liability for companies that hold such data. To solve this problem, one must rethink the whole paradigm of identity management. One obvious solution is to let the user have full control of her personal information. The user should be able to decide, on a case by case basis, who have access to her data. The access timing, duration, and accepted use of the data should all be approved by the user. In this case, there will be no central repository of personal information to attack. However, without blockchain-based Smart Business Contracts, such systems are also very hard to implement. 
+
+Blockchain networks manage identities through cryptographic keys. The user’s “wallets” on bitcoin or Ethereum blockchains are decentralized, and entirely controlled by the user through her private key. Using Smart Business Contracts, we can extend the concept of “wallets” to include a secure deposit of not only crypto tokens, but also arbitrary personal information. Like crypto currency wallets, there could be many “personal identity wallets” on the network. Upon user’s request (a transaction signed by the user’s private key), the wallet can authorize 3rd party applications to access the data temporarily via the OAUTH protocol. A user can use different wallets for different purposes, just like how crypto token wallets are used today.
+
+The workflow below and Figure 3 illustrate how an “online wallet” for personal information could work. This particular “wallet” stores the user’s personal banking information. Hence the user can authorize financial applications on the CyberMiles network to utilize it. An example is the peer to peer small business lending application illustrated in Section 5.2. 
+
+1. The user selects a "wallet" app she trusts.
+1. The user registers personal information and banking information with wallet.
+1. The wallet does AML / KYC validations for government mandated anti-money laundry check.
+1. The wallet generates a public / private key pair and then broadcasts the public key to the blockchain for record.
+1. The wallet authorizes and tests the banking link.
+
+_Figure 3. A decentralized identity management platform on CyberMiles_
+
+### 5.2 A Peer to Peer Small Business Loan Marketplace
+
+A potential application built on the CyberMiles’ blockchain would be a peer-to-peer small business loan marketplace. As described in section 5.1, we will build a decentralized identity management platform on CyberMiles. The blockchain can then record the credit history for each user identified by her public key.
+
+With the identity and credit history, we can build a loan matching engine (the loan “exchange”) on the blockchain. And once loan terms are matched, the Smart Business Contracts would automatically settle the loan directly from each party’s bank account using CMT (authorized via their “personal information wallets”) without a central clearing house. The workflow below and Figure 4 describes how to match and settle a loan.
+
+1. The user logs into the exchange via OAUTH from her wallet. The exchange caches but not stores personal information.
+1. The user submits her desired loan terms (borrow or lend, term, interest rate).
+1. The exchange suggests matches.
+1. The exchange provides detailed credit scores and histories for matched candidates.
+1. If the user selects a candidate. Both parties will need to agree. 
+1. The loan contract is recorded by the exchange and on the blockchain. 
+1. The exchange requests the wallets to settle both parties via their bank accounts. 
+
+_Figure 4. Match and settle a decentralized loan._
+
+Throughout the term of the loan, when a payment is due, the Smart Business Contract would automatically execute the following.
+
+1. The exchange requests both party’s wallets to settle payments via their bank accounts.
+1. The transaction result is broadcasted to the blockchain, and become part of the credit history. 
+
+### 5.3 Supply Chain Cash Flow
+
+The virtual token in the CyberMiles blockchain system (the CMT) is primarily used to compensate for accessing the network (i.e., the businesses pays to execute their Smart Business Contracts and validate the blockchain network). However, it could also be used as an in-network medium to settle accounts for parties, including end consumers and sellers, on the supply chain. 
+
+Since CMT is a digital token, its settlement would be instant, free, and secure. The CMT allows for highly efficient supply chain management, as the “transaction flow” could happen at the same time as the products move. The parties would only need to convert their CMT balance to other assets periodically through exchanges on the network.
+
+### 5.4 Certified Products
+
+One of the key features of the blockchain is its ability to keep immutable and secure digital records. This feature helps to address one of the most difficult issues in global e-commerce: counterfeit products.
+
+Smart Business Contracts could be set up for product makers / producers to create authenticity certificates for each of the product items they make (e.g., through an API connection between the factory’s production system and the CyberMiles Smart Business Contract). This certificate could then be transparently tracked as the product moves through the supply chain from sellers to buyers. 
+
+### 5.5 Community-based Dispute Resolution
+A centralized e-commerce company needs to hire customer services to resolve disputes between buyers and sellers. An e-commerce company building a DApp on top of CyberMiles blockchain could obviously do the same. However, as a decentralized platform, the CyberMiles would offer another compelling solution.
+
+CyberMiles community users could volunteer to become arbiters in exchange of CMTs. Since key steps of the transaction is recorded on the blockchain (including the authenticity certificates of products, and delivery receipts), a Smart Business Contract could develop a mechanism for the arbiter to locate those records at the consent of both the seller and buyer. The Smart Business Contract could hold an escrow pledge in CMT from the seller and buyer pending the conflict resolution. Once the arbiter resolves the conflict and both parties are satisfied, the escrow will be released to the “winning” party and the arbiter will receive a percentage allocation. 
+
+## GLOSSARY
+
+**CyberMiles blockchain:** A new decentralized blockchain protocol optimized for business transactions.
+
+**Smart Business Contract:** A business application that can be executed on the CyberMiles blockchain.
+
+**CyberMiles Token (CMT):** Crypto currency / token used to award people who host CyberMiles blockchain nodes to maintain the blockchain and execute smart business contracts. Business and parties who submit Smart Business Contracts to be executed on the network must pay CMTs depending on the complexity of the contract.
+
+**CyberMiles Validator:** A person or entity who contributes computing power to maintain the CyberMiles blockchain infrastructure, including executing Smart Business Contracts. This person can be anywhere in the world, and s/he may be unaffiliated with 5miles. S/he is incentivized by awards (CMTs s/he can receive as a by-product of maintaining the network).
+
+**CyberMiles Application:** Any business can build and deploy applications on the CyberMiles blockchain. The business will submit a set of Smart Business Contracts to be executed on the network. The business must buy CMTs to pay the network for access, and could use CMTs to settle or facilitate internal financial transactions. 
+
+**End User:** Buyers and sellers on the 5miles application do not have to be aware of CyberMiles at all. Smart Business Contracts can exchange their USD to / from CMTs immediately before and after the transaction. 
+
+**5miles:** It is a C2C (Consumer to Consumer) e-commerce marketplace application developed by the 5Miles LLC. 5miles has over 10 million US customers with an estimated $3 billion in annual run-rate transaction value.
+
+## ACKNOWLEDGMENTS
+
+We would like to acknowledge Dr. Michael Yuan and Dr. Lucas Lu for their contributions to this paper.
+
+## REFERENCES
+
+[1]	Nakamoto, S. Bitcoin: A Peer-to-Peer Electronic Cash System. https://bitcoin.org/bitcoin.pdf 2008.
+[2]	The Ethereum Team. A Next-Generation Smart Contract and Decentralized Application Platform. https://github.com/ethereum/wiki/wiki/White-Paper  2014
+[3]	Kwon, J. Tendermint: Consensus without Mining. https://tendermint.com/static/docs/tendermint.pdf 2014.
+[4]	Popov, S. IOTA: The tangle. https://iota.org/IOTA_Whitepaper.pdf 2016.
+[5]	Zamfir, V. Introducing Casper “the Friendly Ghost”. https://blog.ethereum.org/2015/08/01/introducing-casper-friendly-ghost/ 2015.
+[6]	Kwon, J and Buchman, E. Cosmos: A Network of Distributed Ledgers. https://cosmos.network/whitepaper 2016.
+[7]	Wood, G. Polkadot: Vision for a heterogeneous multi-chain framework. https://github.com/polkadot-io/polkadot-white-paper 2016.
+[8]	Poon, J and Dryja, T. The Bitcoin Lightning Network:
+Scalable Off-Chain Instant Payments. https://lightning.network/lightning-network-paper.pdf 2016.
+[9]	Poon, J and Buterin, V. Plasma: Scalable Autonomous Smart Contracts. http://plasma.io/plasma.pdf 2017.
+[10]	Teutsch, J and Reitwiebner, C. A scalable verification solution for blockchains. http://bit.ly/2vIConl 2017.
+[11]	Forgy, C. Rete: A Fast Algorithm for the Many Pattern / Many Object Pattern Match Problem. Artificial Intelligence. 19: 17–37. 1982.
+[12]	Oracle. The Java Enterprise Edition Platform. https://www.oracle.com/java/technologies/java-ee.html
+[13]	Redhat. The Drools Business Rules Management System.  http://drools.org/
+[14]	Sandia National Laboratories. Jess, the Rule Engine for the Java Platform. http://www.jessrules.com/
+[15]	Redhat. jBPM, a flexible Business Process Management Suite. http://www.jbpm.org/
+[16]	Lazo, D. OSWorkflow. http://shop.oreilly.com/product/9781847191526.do 2007
+[17]	DataStax. The Apache Cassandra database. http://cassandra.apache.org/
+[18]	The Ethereum Team. Swarm, serverless hosting incentivised peer-to-peer storage and content distribution. http://swarm-gateways.net/bzz:/theswarm.eth
+[19]	Benet, J. IPFS - Content Addressed, Versioned, P2P File System. 
+[20]	Protocol Labs. Filecoin: A Decentralized Storage Network. http://filecoin.io/filecoin.pdf 2017.[21]	The Civic Team. Civic Whitepaper. https://tokensale.civic.com/CivicTokenSaleWhitePaper.pdf 2017
+[22]	Thomas, S. & Schwartz, E. A Protocol for Interledger Payments. https://interledger.org/interledger.pdf 2015
+
