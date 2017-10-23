@@ -1,9 +1,5 @@
 # CyberMiles: A Next Generation Blockchain Protocol for Business Transactions
 
-By 5xlab
-
-A technical white paper 
-
 v1.5
 
 [Commercial scenarios and token sale terms are discussed in a separate document]
@@ -252,4 +248,67 @@ As noted above, the business system reacts to external events. The BPM waits for
 
 To accomplish this, each CyberMiles blockchain node will also embed a web server that can receive external messages and trigger BPM events. Each of the Smart Business Contract application can publish one or more webhook URLs to receive external events. The active nodes on the blockchain registers themselves on the DNS system and can all receive incoming HTTP requests. 
 
+## 4. BLOCKCHAIN
+
+A Smart Business Contract ties together all the business middleware components, and connects them with the transaction ledger maintained by the blockchain. Following the lead of Ethereum, CyberMiles is building a Turing complete virtual machine attached to the blockchain. The virtual machine can be programmed via a JavaScript-like scripting language (similar to Ethereum’s Solidify programming language). It can complete tasks such as connecting webhook events to BPM processes, loading business rules, and accessing shared databases (see Figure 1). 
+
+For a Smart Business Contract, the developer would need to bundle together the application code, BPM configuration files, webhook configuration, and business rules file, into a single archive and then submit the archive file to the blockchain for processing and deployment. Once the Smart Business Contract is deployed, external systems can access it via blockchain addresses. For example, DApps can build a UI for the application, and it utilizes Smart Business Contract to process all business logic, and have the resulting token transactions recorded in the blockchain.
+
+### 4.1 Blockchain and Consensus
+
+For the blockchain layer of the CyberMiles system, we aim NOT to reinvent the wheel, but to build on an existing blockchain framework instead. Our main criteria for the underlying technology include the following.
+
+* It must be a community driven and actively developed open source project. That would allow CyberMiles to make changes to the infrastructure software, influence future directions of the software, and contribute back to the community.
+
+* The software architecture must support a clean separation between the core blockchain logic (i.e., the consensus logic) and the application logic to validate transactions. The consensus engine takes care of the process to propose and commit new blocks on the chain; The custom applications validate the transactions, including execution of Smart Business Contracts, and determine which transactions should be recorded in the blockchain. The CyberMiles virtual machine and entire software stack for Smart Business Contracts would be written as custom applications on the blockchain.
+
+* The blockchain consensus engine must have proven performance to scale to consumer-grade applications with millions of users. Ideally, it should be one of the recognized top candidate solutions for Ethereum scalability. In other words, it must be market leading in terms of engineering maturity.
+
+The CyberMiles team has conducted extensive research comparing available blockchain infrastructure solutions. We have tentatively concluded that we will build the first iteration of the CyberMiles blockchain on the Tendermint / Cosmos platform. Figure 2 shows the proposed software architecture on each of the validator nodes on the CyberMiles blockchain. In fact, CyberMiles is already making technical contributions to the Tendermint / Cosmos platform.
+
+* The Tendermint project creates a Byzantine fault tolerant (BFT) consensus engine. It is a very active and well-funded open source effort (after a successful ICO itself). The blockchain itself can withstand up to 1/3 of node failure (crashed or subverted). In a DPoS (Delegated Proof of Stake) setup, individual validators are strongly incentivized against subverting the network, making Byzantine failures exceedingly rare.
+
+* Tendermint has a modern and modular architecture. The consensus engine can be independently plugged into other types of blockchains. For example, the Ethermint project utilizes the Tendermint consensus engine to scale Ethereum. The ABCI (Applicaion BlockChain Interface) is a simple and clean application logic interface that enables CyberMiles to develop its virtual machine and application stack. As a new transaction comes in, the blockchain would pass it to the CyberMiles application via ABCI; Once the relevant Smart Business Contracts are executed and the transaction is validated by the CyberMiles application, it would be passed back to the blockchain consensus engine for record keeping.
+
+* Tendermint is a high performance blockchain implementation based on the DPoS (Delegated Proof of Stake) consensus mechanism. It is officially endorsed by Ethereum as an Ethereum scalability solution. During tests, it can reliably support 10,000 transactions per second, making it one of the leading engineering solutions.
+
+Due to the underlying Tendermint DPoS mechanism, the CyberMiles blockchain would have a block generation time of under 10s, and transactions in a block are instantly confirmed once the block is committed. 
+
+_Figure 2. illustrates the work CyberMiles blockchain validators perform._
+
+### 4.2 The Crypto Token
+
+The CyberMiles blockchain will create and record a native crypto token called the CyberMiles Token (CMT). There are two uses of the CMT: to compensate community members for the services they provide, and to facilitate financial transactions on the network. Those two use cases are also inter-related as the “fee” collected from each transaction settlement is used to pay validators who provide services to facilitate the transaction. Let’s now consider the two use cases in detail. First, network participants can earn CMTs by providing services.
+
+* They could become validators to service the network. Specifically, participants would execute Smart Business Contracts for DApps (such as the 5miles app) to earn CMTs (gas paid by the DAapps, see below). Or, they could validate and record new transactions on the blockchain and earn CMTs from the DPoS consensus protocol.
+
+* They could provide services to their peers on the network. Consumers and businesses on the network could use CMT to pay each other for services, such as arbiter services for dispute resolution and even development services for Smart Business Contracts
+
+**Note:** _The CMT would be converted to gas at a dynamic exchange rate – so that the converted value of a unit of gas remains stable. The gas is then used to pay for CyberMiles nodes that execute Smart Business Contracts. The gas price of the Smart Business Contract will be estimated by the system at the time when the Smart Business Contract is submitted to the blockchain._
+
+Second, the CMT could be used as the internal settlement currency on CyberMiles network applications. For instance, a small business loan application (see section 5) could use CMT to settle loans and repayments without a centralized clearing house to ensure privacy, transparency, and fund safety; A supply chain management application could settle intermediate transactions in CMT, and only allow for conversion to fiat currencies for balances at the end of a day. That reduces fiction and transaction costs. In both cases, the network extracts a small fee from each settlement transaction to pay validators that execute the Smart Business Contracts related to the transaction.
+
+Both use cases of the CMT are well-accepted in the blockchain technology community. The CMT is necessary because we are building a new CyberMiles blockchain infrastructure, and hence cannot simply use ETH or BTC for functions native to the new blockchain. The CMT can be compared with some popular tokens that exist today. 
+
+__Compare with XRP__
+
+Like the Ripple network, the CyberMiles network would use its native crypto token to facilitate decentralized settlement of transactions. 
+
+However, Ripple “burns” a small amount of XRP for each transaction while CyberMiles would collect the transaction fee to pay validators who execute the Smart Business Contracts associated with the transaction. In addition, the Ripple network is a permission-based blockchain, and all nodes are big financial institutions. The CyberMiles network would be a public blockchain serving small businesses. 
+
+__Compare with ETH__
+
+Like the Ethereum network, the CyberMiles network would reward validators for both creating new blocks and executing Smart Contracts in the block (via gas fees). 
+
+However, the current generation of Ethereum is very slow and hence prohibitively expensive to run complex smart contracts. CyberMiles is designed to be highly performant and scalable for running complex Smart Business Contracts. In addition, Ethereum aims to be a general purpose computing network, while the CyberMiles Smart Business Contracts are specifically optimized for e-commerce transactions. 
+
+### 4.3 Jumpstart the Network Effect
+
+For the CyberMiles network to take off, it is essential that reaches the network effect and provides enough value for businesses and miners to join the network. One of the purposes of an ICO is to provide resources to jumpstart the network. We aim to accomplish the following through the CyberMiles ICO.
+
+First, the development team will leverage 5miles’ extensive experience from running one of the largest e-commerce web sites in the USA to build Smart Business Contract templates. There are thousands of contract templates in 5miles divided into 20 major categories. They are tested for real world applications and are readily available for reuse. Furthermore, the system operates a “store”, which is in itself a DApp on blockchain, to sell Smart Business Contract templates developed by third party users. The templates can be priced in CMT or in gas units. 
+
+Second, 5miles will create a new application to support small business loans between its 10 million US-based users and small businesses. The application will support decentralized personal identity and credit management, as well as decentralized loan / repayment settlement (without a central clearing house). This effort could potentially move 10 million American user identities and credit histories to the CyberMiles blockchain. This application could provide a blueprint for other developers to take advantage of the user identify and credit history on CyberMiles, and build their own consumer facing applications. By using the CMT as a settlement currency, the CyberMiles network can extract a small fee to pay validators for the execution of Smart Business Contracts related to the loans terms. As more applications are built on CyberMiles, the consumption of CMT gas will increase.
+
+Finally, 5miles will migrate its flagship C2C (Consumer to Consumer) e-commerce application to the CyberMiles blockchain. It will be a DApp managed by 5miles, and supported by Smart Business Contracts on CyberMiles. That could potentially move $3 billion worth of transactions to the CyberMiles platform. As a result, 5miles itself will purchase and consume significant amount of CMT in order to pay the gas cost for running Smart Business Contracts. 
 
